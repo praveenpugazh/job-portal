@@ -1,0 +1,53 @@
+.navbar {
+  background-color: var(--theme-ui-colors-background);
+  border-bottom: 1px solid #e9edf5;
+}
+
+nav {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  flex: 1 1 250px;
+}
+.logoColor {
+  color: var(--theme-ui-colors-primary);
+}
+.navLinks {
+  flex: 2 1 400px;
+}
+
+.navLinks ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons {
+  flex: 1 1 300px;
+  display: flex;
+  margin-left: 100px;
+}
+.loginBtn {
+  padding: 8px 20px;
+  margin-right: 60px;
+  border-radius: 5px;
+  border: 2px solid var(--theme-ui-colors-background_secondary);
+  font-weight: bold;
+  cursor: pointer;
+}
+.signupBtn {
+  background-color: var(--theme-ui-colors-primary);
+  color: var(--theme-ui-colors-background);
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signupBtn:hover {
+  background-color: var(--theme-ui-colors-secondary);
+}

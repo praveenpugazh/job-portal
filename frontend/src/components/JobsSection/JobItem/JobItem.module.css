@@ -1,0 +1,49 @@
+.jobCard {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--theme-ui-colors-background);
+  /* box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);*/
+  margin: 0.2rem 0rem;
+  border: 1px solid var(--theme-ui-colors-border_color);
+  border-radius: 8px;
+}
+
+.jobCard h3 {
+  font-size: 1.3rem;
+}
+.jobCard p {
+  font-size: 0.9rem;
+}
+
+.firstLine {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+.firstLine span {
+  color: var(--theme-ui-colors-primary);
+}
+.firstLine .skills {
+  color: black;
+}
+.firstLine p {
+  place-self: end;
+}
+.lastLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.applyBtn {
+  padding: 6px 16px;
+  background-color: var(--theme-ui-colors-primary);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.applyBtn:hover {
+  background-color: var(--theme-ui-colors-secondary);
+}

@@ -3,3 +3,41 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*variables */
+:root {
+  --theme-ui-colors-text: #343d48;
+  --theme-ui-colors-text_secondary: #02073e;
+  --theme-ui-colors-heading: #0f2137;
+  --theme-ui-colors-heading_secondary: #343d48;
+  --theme-ui-colors-background: #ffffff;
+  --theme-ui-colors-background_secondary: #f9fbfd;
+  --theme-ui-colors-border_color: #e9edf5;
+  --theme-ui-colors-primary: #3cc68a;
+  --theme-ui-colors-secondary: #00a99d;
+  --theme-ui-colors-muted: #7b8188;
+  --theme-ui-colors-accent: #660099;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--theme-ui-colors-background_secondary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.4rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.4rem;
+}
+a {
+  text-decoration: none;
+  color: #02073e;
+}
+li {
+  list-style-type: none;
+}

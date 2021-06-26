@@ -1,0 +1,14 @@
+.container {
+  width: 85%;
+  margin: 2rem auto;
+}
+
+.jobsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container h2 {
+  font-size: 1.6rem;
+}
