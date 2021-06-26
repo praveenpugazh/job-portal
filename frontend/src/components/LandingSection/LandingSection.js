@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./LandingSection.module.css";
 import image from "../../assets/landing.svg";
+import paypal from "../../assets/paypal.svg";
+import google from "../../assets/google.svg";
+import dropbox from "../../assets/dropbox.svg";
 const LandingSection = () => {
   return (
     <div className={styles.container}>
@@ -11,6 +14,12 @@ const LandingSection = () => {
         <p>the perfect job that suits you the best</p>
         <input type="text" placeholder="Enter your email" />
         <button className={styles.getStartedBtn}>Get Started</button>
+        <div className={styles.imageContainer}>
+          <img src={paypal} alt="" />
+          <img src={google} alt="" />
+          <img src={dropbox} alt="" />
+          <p>Hire from us</p>
+        </div>
       </div>
       <div className={styles.imageContent}>
         <img src={image} alt="" />

@@ -35,6 +35,7 @@
   padding: 10px 16px;
   border-radius: 8px;
   background-color: var(--theme-ui-colors-primary);
+  color: white;
   border: none;
 }
 .getStartedBtn:hover {
@@ -44,4 +45,10 @@
 .textContent input:focus {
   border-color: var(--theme-ui-colors-primary);
   outline: var(--theme-ui-colors-primary);
+}
+.imageContainer {
+  margin-top: 1rem;
+}
+.imageContainer img {
+  margin-right: 15px;
 }
