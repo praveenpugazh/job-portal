@@ -36,7 +36,7 @@ export const loginUser = async (req, res) => {
 //Signup user and generate token
 
 export const signUpUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, isRecruiter } = req.body;
   let user = await User.findOne({ email });
   if (user) {
     return res.status(400).json({ msg: "user already exists" });
@@ -45,6 +45,7 @@ export const signUpUser = async (req, res) => {
     name,
     email,
     password,
+    isRecruiter,
   });
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(password, salt);

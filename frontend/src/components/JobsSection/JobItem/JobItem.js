@@ -13,9 +13,9 @@ const JobItem = ({ data }) => {
             <span className={styles.skills}>{skill}, </span>
           ))}
         </p>
-        <p>Posted: {data.date}</p>
+        <p>Posted: {data.createdAt}</p>
       </div>
-      <p>Seniority: {data.seniority}</p>
+      <p>Experience: {data.experience}</p>
       <div className={styles.lastLine}>
         <p>{data.description}</p>
         <button className={styles.applyBtn}>Apply</button>

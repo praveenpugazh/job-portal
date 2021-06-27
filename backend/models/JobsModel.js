@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 
 const jobSchema = new mongoose.Schema(
   {
+    user: {
+      type: mongoose.Schema.Types.ObjectID,
+      required: true,
+      ref: "user",
+    },
     title: {
       type: String,
       required: true,
@@ -12,7 +17,7 @@ const jobSchema = new mongoose.Schema(
     },
     level: {
       type: String,
-      require: true,
+      // required: [true, "please enter seniority of the job"],
     },
     experience: {
       type: String,

@@ -17,7 +17,11 @@ const userSchema = new mongoose.Schema(
     },
     isRecruiter: {
       type: Boolean,
-      default: false,
+      required: [true, "Enter is recruiter"],
+    },
+    jobs: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "job",
     },
   },
   {

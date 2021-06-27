@@ -2,11 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import jobRouter from "./router/jobRouter.js";
 import authRouter from "./router/authRouter.js";
+import cors from "cors";
 import dotenv from "dotenv";
 import { auth } from "./middleware/auth.js";
 const app = express();
 app.use(express.json());
 dotenv.config();
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
@@ -15,7 +17,12 @@ app.get("/", (req, res) => {
 
 mongoose.connect(
   process.env.MONGODB_URI,
-  { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true },
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  },
   () => {
     console.log("Connection to MongoDB successful");
   }

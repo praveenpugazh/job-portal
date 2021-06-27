@@ -8,7 +8,7 @@
 .formContainer h2 {
   margin-bottom: 1rem;
 }
-.formContainer input {
+.inputField {
   width: 90%;
   padding: 12px;
   margin-bottom: 15px;

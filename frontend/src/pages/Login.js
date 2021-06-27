@@ -7,9 +7,13 @@ const Login = () => {
     <div className={styles.container}>
       <div className={styles.formContainer}>
         <h2>Login</h2>
-        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Email" className={styles.inputField} />
         <br />
-        <input type="password" placeholder="Password" />
+        <input
+          type="password"
+          placeholder="Password"
+          className={styles.inputField}
+        />
         <br />
         <button className={styles.loginBtn}>Login</button>
         <p>

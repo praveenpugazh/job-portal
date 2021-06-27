@@ -1,9 +1,8 @@
 const jobsData = [
   {
-    id: 22110,
     title: "React Developer",
     company: "MeTube",
-    seniority: "Mid",
+    level: "Mid",
     experience: "2 - 4",
     date: "one day ago",
     description:
@@ -11,10 +10,9 @@ const jobsData = [
     skills: ["React", "HTML5", "CSS", "JavaScript"],
   },
   {
-    id: 22111,
     title: "Full-Stack Developer",
     company: "Marks",
-    seniority: "Entry",
+    level: "Entry",
     experience: "0.6-1",
     date: "two day ago",
     description:
@@ -22,10 +20,9 @@ const jobsData = [
     skills: ["React", "HTML5", "CSS", "JavaScript"],
   },
   {
-    id: 22112,
     title: "Backend Developer",
     company: "A to Z",
-    seniority: "Senior",
+    level: "Senior",
     experience: "4-6",
     date: "today",
     description:
@@ -33,10 +30,9 @@ const jobsData = [
     skills: ["React", "HTML5", "CSS", "JavaScript"],
   },
   {
-    id: 22113,
     title: "React Developer",
     company: "Klick Kart",
-    seniority: "Mid",
+    level: "Mid",
     experience: "2 - 4",
     date: "one day ago",
     description:
