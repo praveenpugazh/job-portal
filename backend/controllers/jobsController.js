@@ -87,3 +87,15 @@ export const getPostedJobs = async (req, res) => {
     res.status(500).json({ msg: "Server Error" });
   }
 };
+
+export const applyJobs = async (req, res) => {
+  let user = await Users.findById(req.user.id);
+  user.jobs = [...user.jobs, req.params.id];
+  user.save();
+  res.json({ user });
+};
+
+export const getAppliedJobs = async (req, res) => {
+  let user = await Users.findById(req.user.id);
+  res.json({ jobs: user.jobs });
+};

@@ -33,7 +33,7 @@ const Login = () => {
       password: "",
       type: "",
     });
-    history.push("/login");
+    history.push("/jobs");
   };
   return (
     <div className={styles.container}>

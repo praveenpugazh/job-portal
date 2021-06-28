@@ -2,6 +2,7 @@ import User from "../models/UserModel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+
 dotenv.config();
 //Login user and get Token
 export const loginUser = async (req, res) => {
@@ -65,4 +66,12 @@ export const signUpUser = async (req, res) => {
       res.json({ token });
     }
   );
+};
+
+export const getUserProfile = async (req, res) => {
+  let user = await User.findById(req.user.id).select("-password");
+  if (!user) {
+    return res.status(401).json({ msg: "Forbidden" });
+  }
+  return res.json({ user });
 };

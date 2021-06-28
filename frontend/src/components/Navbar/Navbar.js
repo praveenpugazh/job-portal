@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../context/userContext/userContext";
 import styles from "./Navbar.module.css";
 const Navbar = () => {
+  const userContext = useContext(UserContext);
+  const { isAuthenticated, user, logoutUser } = userContext;
+  const logoutHandler = () => {
+    logoutUser();
+  };
   return (
     <header className={styles.navbar}>
       <nav>
@@ -18,17 +24,30 @@ const Navbar = () => {
             <Link to="/jobs">
               <li>Jobs</li>
             </Link>
-            <li>Support</li>
+            {user.isRecruiter === false ? (
+              <li>Applied Jobs</li>
+            ) : (
+              <li>Post Job</li>
+            )}
           </ul>
         </div>
-        <div className={styles.buttons}>
-          <Link to="/login">
-            <button className={styles.loginBtn}>Login</button>
-          </Link>
-          <Link to="/signup">
-            <button className={styles.signupBtn}>Signup</button>
-          </Link>
-        </div>
+        {!isAuthenticated ? (
+          <div className={styles.buttons}>
+            <Link to="/login">
+              <button className={styles.loginBtn}>Login</button>
+            </Link>
+            <Link to="/signup">
+              <button className={styles.signupBtn}>Signup</button>
+            </Link>
+          </div>
+        ) : (
+          <div className={styles.buttons}>
+            <p>Welcome, {user.name}</p>
+            <button className={styles.signupBtn} onClick={logoutHandler}>
+              Logout
+            </button>
+          </div>
+        )}
       </nav>
     </header>
   );

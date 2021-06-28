@@ -6,6 +6,7 @@ const initialState = {
     loading: true,
     data: [],
   },
+  token: localStorage.getItem("token") || null,
 };
 const access_token =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjBkODJjMzliNWU2ZjQzOWJjZmE2YTU3In0sImlhdCI6MTYyNDc4MDYyMiwiZXhwIjoxNjI1MTQwNjIyfQ.2hM4PESO4HYBUW-m8Tn_09FG0J_jPHxBDzziOVGxJDY";
